@@ -9,11 +9,6 @@
         public bool Ativo { get; private set; }
         public TipoUsuario TipoUsuario { get; set; }
 
-        private Usuario()
-        {
-            
-        }       
-
         public static Usuario NovoUsuario(string senha, string login, string nome, TipoUsuario tipoUsuario)
         {
             Usuario usuario = new Usuario();
@@ -30,19 +25,14 @@
         {
             Usuario usuario = new Usuario();
             usuario.Login = login;
-            usuario.Nome = nome; 
-            
-            return usuario;
-        }
+            usuario.Nome = nome;
 
-        public void InativarUsuario()
-        {
-            Ativo = false;
+            return usuario;
         }
 
         public void AlterarSenha(string senha)
         {
             Senha = senha;
-        }        
+        }
     }
 }
