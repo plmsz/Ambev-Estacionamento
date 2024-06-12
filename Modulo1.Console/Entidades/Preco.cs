@@ -22,8 +22,6 @@
 
     internal abstract class Preco
     {
-        public TipoVeiculo TipoVeiculo { get; set; }
-
-        public abstract void CalcularPreco();
+        public abstract long CalcularPreco(Ticket ticket);
     }
 }

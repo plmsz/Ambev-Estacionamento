@@ -5,7 +5,9 @@ internal class PrecoFixo : Preco
     public decimal ValorDiaria { get; set; }
     public decimal ValorPernoite { get; set; }
 
-    public override void CalcularPreco()
+    public override long CalcularPreco(Ticket ticket)
     {
+        return ticket.Veiculo.TipoVeiculo == TipoVeiculo.Carro ?
+         10 : 7;
     }
 }

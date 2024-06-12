@@ -7,6 +7,7 @@
         public string? Modelo { get; set; }
         public string? Marca { get; set; }
         public string? Cor { get; set; }
+        public TipoVeiculo TipoVeiculo { get; set; }
 
         public abstract void CadastrarVeiculo(string placa);
     }
